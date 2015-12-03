@@ -6,21 +6,14 @@ Select::Select() {
 
 	my_angle = 0.0f;
 	mry = 0.0f;
-	//mtouchPos = dowa::Device::getTouchPos();//ci::Vec2f(0.0f, 0.0f);
 
 	mDeviceWindowHeight = dowa::getWindowHeight();
 	mDeviceWindowWidth = dowa::getWindowWidth();
 
-	//stage1.pos = ci::Vec3f(150.0f, 250.0f, 0.0f); // nothing translate(test)
 	stage1.pos = ci::Vec3f(120.0f, 200.0f, 0.0f);
 	stage1.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
 	stage1.resize = ci::Vec3f::zero()/*(10.0f, 10.0f, 10.0f)*/;
 	stage1.resize_angle = ci::Vec3f(0.0f, 0.0f, 0.0f);
-
-	
-
-	//mStage1pos = ci::Rectf(stage1.pos.x, stage1.pos.y, 
-	//	                 stage1.size.x, stage1.size.y);
 
 	stage2.pos = ci::Vec3f(320.0f, 75.0f, 0.0f),
 		stage2.size = ci::Vec3f(200.0f, 75.0f, 0.0f);
@@ -36,7 +29,6 @@ Select::Select() {
 
 void Select::update() {
 
-	//setNextScene(SceneType::GameMain, FadeType::None);
 	//-------------------------------------------------------------
 	//move up and down
 	mry = std::cos(my_angle) * 10.0f;
